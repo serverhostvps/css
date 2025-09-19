@@ -42,13 +42,17 @@ template{display:none}
 .hidden{display:none}
 .invisible{visibility:hidden}
 .bg-rianseo{position:fixed;inset:0;z-index:-1;height:100vh;width:100vw}
-.container{display:flex;min-height:100vh;justify-content:center}
+.container{
+  display:flex;
+  justify-content:center;
+  /* min-height:100vh; ⬅ dihapus penyebab ruang kosong */
+}
 .widget-flex{display:flex;justify-content:center;align-items:center}
 .widget_bottom svg{margin-left:5px}
 .widget_bottom{
   position:relative;
   z-index:10;
-  /* padding-bottom:176px;  ⬅ dihapus penyebab ruang kosong */
+  /* padding-bottom:176px;  ⬅ dihapus */
   margin:48px 0 0;
 }
 .widget_bottom img{width:96px;height:96px;display:block;border-radius:50%;-o-object-fit:cover;object-fit:cover;margin:0 auto}
@@ -65,12 +69,21 @@ template{display:none}
 .copyright-web{
   position:relative;
   text-align:center;
-  /* padding:0 0 35px; ⬅ dihapus penyebab ruang kosong */
+  /* padding:0 0 35px; ⬅ dihapus */
   overflow:hidden;
+  margin-bottom:40px; /* ✅ Tambah jarak bawah */
 }
 .copyright-web img{background:#fff;width:32px;object-fit:contain;height:32px;border:1px solid rgba(155,155,155,0.1)}
 
-/* Tambah jarak aman bagian bawah */
+/* Tambah jarak aman bagian bawah konten */
 body {
-  padding-bottom: 40px; /* atur sesuai kebutuhan */
+  padding-bottom:40px; /* atur sesuai kebutuhan */
+}
+
+/* Fix ruang kosong di desktop */
+@media (min-width:1024px) {
+  .container {
+    min-height:auto !important;
+    height:auto !important;
+  }
 }
