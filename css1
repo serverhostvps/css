@@ -1,0 +1,89 @@
+/* === RESET DASAR === */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  padding-bottom: 5px !important; /* ruang kosong kecil di bawah */
+}
+
+/* Avatar/logo */
+.widget_bottom img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* Nama user + verified centang */
+.widget-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; /* jarak icon dengan teks */
+}
+.widget-flex .title {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Deskripsi */
+.widget_bottom p.caption {
+  margin: 8px auto;
+  font-size: 14px;
+  color: #333;
+  max-width: 500px;
+}
+
+/* Tombol link */
+.bioLink-item {
+  border-radius: 30px;
+  margin: 12px 0;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.bioLink-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #e0e0e0;
+  color: #000;
+  transition: background 0.2s, transform 0.2s;
+}
+.bioLink-item a:hover {
+  background: #d0d0d0;
+  transform: scale(1.02);
+}
+
+/* Footer copyright */
+.footer-copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding: 8px 0;
+  margin: 16px 0 0;
+}
+.footer-copyright a {
+  color: #0000ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hilangkan ruang kosong berlebih */
+.container,
+.post,
+.post-body,
+.post-outer,
+.post-outer-container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
